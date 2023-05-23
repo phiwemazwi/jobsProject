@@ -340,7 +340,7 @@ body[data-layout-mode="dark"] .footer-alt {
 }
 .bg-soft-primary {
   background-color: rgba(118, 109, 244, 0.15) !important;
-  color: #766df4 !important;
+  color: #929299 !important;
 }
 .bg-soft-primary .border {
   border-color: #766df4 !important;
@@ -353,8 +353,8 @@ body[data-layout-mode="dark"] .footer-alt {
   border-color: #74788d !important;
 }
 .bg-soft-success {
-  background-color: rgba(4, 133, 101, 0.15) !important;
-  color: #048565 !important;
+  background-color: rgba(207, 207, 207, 0.15) !important;
+  color: #2e3130 !important;
 }
 .bg-soft-success .border {
   border-color: #048565 !important;
@@ -409,8 +409,8 @@ body[data-layout-mode="dark"] .footer-alt {
   border-color: #766df4 !important;
 }
 .bg-soft-blue {
-  background-color: rgba(31, 134, 239, 0.15) !important;
-  color: #1f86ef !important;
+  background-color: #d6d6d6 !important;
+  color: #464a4e !important;
 }
 .bg-soft-blue .border {
   border-color: #1f86ef !important;
@@ -2309,9 +2309,9 @@ body[data-layout-mode="dark"] .count-num::after {
   padding: 12px 26px;
 }
 .profile-content-nav.nav-pills .nav-item .nav-link.active {
-  color: #766df4;
+  color: #86858b;
   background-color: transparent !important;
-  border-bottom-color: #766df4;
+  border-bottom-color: #434347;
 }
 .profile-user {
   position: relative;
