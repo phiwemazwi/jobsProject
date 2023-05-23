@@ -5165,8 +5165,13 @@ fieldset:disabled .btn {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid #eff0f2;
-  border-radius: 0.4rem;
+  border-radius: 20px;
+  box-shadow: 0 5px 5px 0 #10111077, inset 0px -0px 0px 0px #808080;
+  transition: all 0.4s ease-in-out;
+}
+
+.hide{
+  display: none;
 }
 .card > hr {
   margin-right: 0;
@@ -8775,7 +8780,7 @@ fieldset:disabled .btn {
   border-radius: 0.4rem !important;
 }
 .rounded-circle {
-  border-radius: 50% !important;
+  border-radius: 10% !important;
 }
 .rounded-pill {
   border-radius: 50rem !important;
