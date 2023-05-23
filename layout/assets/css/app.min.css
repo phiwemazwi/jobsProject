@@ -28,7 +28,6 @@
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   padding: 0;
-  margin-top: 44px;
   background-color: #fff;
   -webkit-box-shadow: 0 3px 10px 0 rgba(49, 64, 71, 0.08);
   box-shadow: 0 3px 10px 0 rgba(49, 64, 71, 0.08);
@@ -79,6 +78,8 @@
 .notification-wrapper {
   max-height: 250px;
   overflow: hidden scroll;
+  border: 1px solid gray;
+  border-radius: 4px;
 }
 .notification-wrapper .notification-item {
   padding: 15px;
@@ -86,7 +87,7 @@
   transition: all 0.5s ease;
 }
 .notification-wrapper .notification-item:hover {
-  background-color: #f8f9fc;
+  background-color: #dbdcdd;
 }
 .notification-header {
   padding: 1rem;
@@ -432,6 +433,7 @@ body[data-layout-mode="dark"] .footer-alt {
   padding-top: 80px;
   padding-bottom: 80px;
   position: relative;
+  background: #eee;
 }
 .section-title .title {
   font-size: 30px;
