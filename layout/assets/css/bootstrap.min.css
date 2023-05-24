@@ -12769,3 +12769,17 @@ body[data-layout-mode="dark"] .job-pagination .page-item.active .page-link {
   border-radius: 25px;
   border: 1px solid #c0c1c7;
 }
+.popu-category-box{
+  border: 1px solid #a6b4b5;
+  height: 300px;
+  transition-property: transform;
+  transition-duration: .2s;
+}
+.container-flexing{
+  display: flex;
+  flex-wrap: wrap;
+}
+.popu-category-box{
+  flex: 1;
+  margin: 8px;
+}
