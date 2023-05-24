@@ -4576,7 +4576,6 @@ fieldset:disabled .btn {
   display: flex;
   -ms-flex-wrap: inherit;
   flex-wrap: inherit;
-  border: 1px solid black;
   
 }
 /* .navbar > .container-fluid{
