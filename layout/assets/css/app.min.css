@@ -1056,8 +1056,8 @@ body[data-layout-mode="dark"]
   color: #fff;
 }
 .bg-home2 {
-  padding: 198px 0 140px 0;
-  background-color: rgba(118, 109, 244, 0.1);
+  padding: 138px 0 140px 0;
+  background-color: rgba(0, 0, 0, 0.1);
   overflow-x: clip;
 }
 @media (max-width: 767.98px) {

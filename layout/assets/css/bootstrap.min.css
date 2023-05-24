@@ -8553,7 +8553,7 @@ fieldset:disabled .btn {
 }
 .text-primary {
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
+  color: #7e8fc3;
 }
 .text-secondary {
   --bs-text-opacity: 1;
@@ -12765,3 +12765,7 @@ body[data-layout-mode="dark"] .job-pagination .page-item.active .page-link {
 }
 
 
+.home-img{
+  border-radius: 25px;
+  border: 1px solid #c0c1c7;
+}
