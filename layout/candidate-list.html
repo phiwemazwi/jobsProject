@@ -7,13 +7,14 @@
         
         
         <meta charset="utf-8" />
-        <title>Candidate List | Jobcy - Job Listing Template | Themesdesign</title>
+        <title>jobsProject</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content=" " />
         <meta name="keywords" content="" />
         <meta content="Themesdesign" name="author" />
+        <script src="assets/js/canidate-search.js"></script>
 
-        <!-- App favicon -->
+        <!-- App favicon to change the image at the top-->
         <link rel="shortcut icon" href="assets/images/favicon.ico">
 
         <!-- Choise Css -->
@@ -36,8 +37,10 @@
         <div>
 
             <!--Navbar Start-->
-            <nav class="navbar navbar-expand-lg fixed-top sticky" id="navbar">
-                <div class="container-fluid custom-container"><!-- 
+            <nav class="navbar navbar-expand-lg fixed-top sticky" id="navbar" >
+                <div class="container-fluid custom-container">
+                    
+                    <!--  -------For the logo-----------------
                     <a class="navbar-brand text-dark fw-bold me-auto" href="index.html">
                         <img src="assets/images/logo-dark.png" height="22" alt="" class="logo-dark" />
                         <img src="assets/images/logo-light.png" height="22" alt="" class="logo-light" />
@@ -45,7 +48,7 @@
                     <div>
                         <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-label="Toggle navigation">
-                            <i class="mdi mdi-menu"></i>
+                            <i class="bi bi-list"></i>
                         </button>
                     </div>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -86,32 +89,32 @@
                             </a>
                             <div class="dropdown-menu dropdown-menu-sm dropdown-menu-end p-0" aria-labelledby="notification">
                                 <div class="notification-header border-bottom bg-light">
-                                    <h6 class="mb-1"> Notification </h6>
-                                    <p class="text-muted fs-13 mb-0">You have 4 unread Notification</p>
+                                    <h6 class="mb-1"> Notifications </h6>
+                                    <p class="text-muted fs-13 mb-0">You have 3 unread Notifications</p>
                                 </div>
                                 <div class="notification-wrapper dropdown-scroll">
                                     <a href="javascript:void(0)" class="text-dark notification-item d-block active">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0 me-3">
-                                                <div class="avatar-xs bg-primary text-white rounded-circle text-center">
-                                                    <i class="uil uil-user-check"></i>
+                                                <div class="avatar-xs bg-secondary text-white rounded-circle text-center" >
+                                                    <i class="bi bi-check2-circle"></i>
                                                 </div>
                                             </div>
                                             <div class="flex-grow-1">
-                                                <h6 class="mt-0 mb-1 fs-14">22 verified registrations</h6>
-                                                <p class="mb-0 fs-12 text-muted"><i class="mdi mdi-clock-outline"></i> <span>3 min
-                                                    ago</span></p>
+                                                <h6 class="mt-0 mb-1 fs-14">8 verified Candidates</h6>
+                                                <p class="mb-0 fs-12 text-muted"><i class="bi bi-clock"></i> 
+                                                    <span>3 min ago</span></p>
                                             </div>
                                         </div>
                                     </a><!--end notification-item-->
                                     <a href="javascript:void(0)" class="text-dark notification-item d-block">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0 me-3">
-                                                <img src="assets/images/user/img-02.jpg" class="rounded-circle avatar-xs" alt="user-pic">
+                                                <img src="assets/images/user/o.jpg" class="rounded-circle avatar-xs" alt="user-pic">
                                             </div>
                                             <div class="flex-grow-1">
-                                                <h6 class="mt-0 mb-1 fs-14">James Lemire</h6>
-                                                <p class="text-muted fs-12 mb-0"><i class="mdi mdi-clock-outline"></i> <span>15 min
+                                                <h6 class="mt-0 mb-1 fs-14">Buhle Kabinde</h6>
+                                                <p class="text-muted fs-12 mb-0"><i class="bi bi-clock"></i> <span>15 min
                                                     ago</span></p>
                                             </div>
                                         </div>
@@ -119,46 +122,20 @@
                                     <a href="javascript:void(0)" class="text-dark notification-item d-block">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0 me-3">
-                                                <img src="assets/images/featured-job/img-04.png" class="rounded-circle avatar-xs"
+                                                <img src="assets/images/user/oo.jpg" class="rounded-circle avatar-xs"
                                                     alt="user-pic">
                                             </div>
                                             <div class="flex-grow-1">
-                                                <h6 class="mt-0 mb-1 fs-14">Applications has been approved</h6>
-                                                <p class="text-muted mb-0 fs-12"><i class="mdi mdi-clock-outline"></i> <span>45 min
+                                                <h6 class="mt-0 mb-1 fs-14">Phila Mzomhle</h6>
+                                                <p class="text-muted mb-0 fs-12"><i class="bi bi-clock"></i> <span>45 min
                                                     ago</span></p>
                                             </div>
                                         </div>
-                                    </a><!--end notification-item-->
-                                    <a href="javascript:void(0)" class="text-dark notification-item d-block">
-                                        <div class="d-flex align-items-center">
-                                            <div class="flex-shrink-0 me-3">
-                                                <img src="assets/images/user/img-01.jpg" class="rounded-circle avatar-xs"
-                                                    alt="user-pic">
-                                            </div>
-                                            <div class="flex-grow-1">
-                                                <h6 class="mt-0 mb-1 fs-14">Kevin Stewart</h6>
-                                                <p class="text-muted mb-0 fs-12"><i class="mdi mdi-clock-outline"></i> <span>1 hour
-                                                    ago</span></p>
-                                            </div>
-                                        </div>
-                                    </a><!--end notification-item-->
-                                    <a href="javascript:void(0)" class="text-dark notification-item d-block">
-                                        <div class="d-flex align-items-center">
-                                            <div class="flex-shrink-0 me-3">
-                                                <img src="assets/images/featured-job/img-01.png" class="rounded-circle avatar-xs"
-                                                    alt="user-pic">
-                                            </div>
-                                            <div class="flex-grow-1">
-                                                <h6 class="mt-0 mb-1 fs-15">Creative Agency</h6>
-                                                <p class="text-muted mb-0 fs-12"><i class="mdi mdi-clock-outline"></i> <span>2 hour
-                                                    ago</span></p>
-                                            </div>
-                                        </div>
-                                    </a><!--end notification-item-->
+                                    </a>
                                 </div><!--end notification-wrapper-->
                                 <div class="notification-footer border-top text-center">
                                     <a class="primary-link fs-13" href="javascript:void(0)">
-                                        <i class="mdi mdi-arrow-right-circle me-1"></i> <span>View More..</span>
+                                        <i class="bi bi-x-square"></i> <span>Close</span>
                                     </a>
                                 </div>
                             </div>
@@ -274,278 +251,12 @@
                                             <div class="row g-2">
                                                 <div class="col-lg-3">
                                                     <div class="filler-job-form">
-                                                        <i class="uil uil-briefcase-alt"></i>
-                                                        <input type="search" class="form-control filter-job-input-box" id="exampleFormControlInput1" placeholder="Job, Company name... ">
+                                                        <input type="search" class="form-control" id="exampleFormControlInput1" placeholder="Job, Company name... " onkeyup="search()">
                                                     </div>
-                                                </div><!--end col-->
-                                                <div class="col-lg-3">
-                                                    <div class="filler-job-form">
-                                                        <i class="bi bi-geo-alt"></i>
-                                                        <select class="form-select" data-trigger name="choices-single-location" id="choices-single-location" aria-label="Default select example">
-                                                            <option value="AF">Afghanistan</option>
-                                                            <option value="AX">&Aring;land Islands</option>
-                                                            <option value="AL">Albania</option>
-                                                            <option value="DZ">Algeria</option>
-                                                            <option value="AS">American Samoa</option>
-                                                            <option value="AD">Andorra</option>
-                                                            <option value="AO">Angola</option>
-                                                            <option value="AI">Anguilla</option>
-                                                            <option value="AQ">Antarctica</option>
-                                                            <option value="AG">Antigua and Barbuda</option>
-                                                            <option value="AR">Argentina</option>
-                                                            <option value="AM">Armenia</option>
-                                                            <option value="AW">Aruba</option>
-                                                            <option value="AU">Australia</option>
-                                                            <option value="AT">Austria</option>
-                                                            <option value="AZ">Azerbaijan</option>
-                                                            <option value="BS">Bahamas</option>
-                                                            <option value="BH">Bahrain</option>
-                                                            <option value="BD">Bangladesh</option>
-                                                            <option value="BB">Barbados</option>
-                                                            <option value="BY">Belarus</option>
-                                                            <option value="BE">Belgium</option>
-                                                            <option value="BZ">Belize</option>
-                                                            <option value="BJ">Benin</option>
-                                                            <option value="BM">Bermuda</option>
-                                                            <option value="BT">Bhutan</option>
-                                                            <option value="BO">Bolivia, Plurinational State of</option>
-                                                            <option value="BA">Bosnia and Herzegovina</option>
-                                                            <option value="BW">Botswana</option>
-                                                            <option value="BV">Bouvet Island</option>
-                                                            <option value="BR">Brazil</option>
-                                                            <option value="IO">British Indian Ocean Territory</option>
-                                                            <option value="BN">Brunei Darussalam</option>
-                                                            <option value="BG">Bulgaria</option>
-                                                            <option value="BF">Burkina Faso</option>
-                                                            <option value="BI">Burundi</option>
-                                                            <option value="KH">Cambodia</option>
-                                                            <option value="CM">Cameroon</option>
-                                                            <option value="CA">Canada</option>
-                                                            <option value="CV">Cape Verde</option>
-                                                            <option value="KY">Cayman Islands</option>
-                                                            <option value="CF">Central African Republic</option>
-                                                            <option value="TD">Chad</option>
-                                                            <option value="CL">Chile</option>
-                                                            <option value="CN">China</option>
-                                                            <option value="CX">Christmas Island</option>
-                                                            <option value="CC">Cocos (Keeling) Islands</option>
-                                                            <option value="CO">Colombia</option>
-                                                            <option value="KM">Comoros</option>
-                                                            <option value="CG">Congo</option>
-                                                            <option value="CD">Congo, the Democratic Republic of the</option>
-                                                            <option value="CK">Cook Islands</option>
-                                                            <option value="CR">Costa Rica</option>
-                                                            <option value="CI">C&ocirc;te d'Ivoire</option>
-                                                            <option value="HR">Croatia</option>
-                                                            <option value="CU">Cuba</option>
-                                                            <option value="CY">Cyprus</option>
-                                                            <option value="CZ">Czech Republic</option>
-                                                            <option value="DK">Denmark</option>
-                                                            <option value="DJ">Djibouti</option>
-                                                            <option value="DM">Dominica</option>
-                                                            <option value="DO">Dominican Republic</option>
-                                                            <option value="EC">Ecuador</option>
-                                                            <option value="EG">Egypt</option>
-                                                            <option value="SV">El Salvador</option>
-                                                            <option value="GQ">Equatorial Guinea</option>
-                                                            <option value="ER">Eritrea</option>
-                                                            <option value="EE">Estonia</option>
-                                                            <option value="ET">Ethiopia</option>
-                                                            <option value="FK">Falkland Islands (Malvinas)</option>
-                                                            <option value="FO">Faroe Islands</option>
-                                                            <option value="FJ">Fiji</option>
-                                                            <option value="FI">Finland</option>
-                                                            <option value="FR">France</option>
-                                                            <option value="GF">French Guiana</option>
-                                                            <option value="PF">French Polynesia</option>
-                                                            <option value="TF">French Southern Territories</option>
-                                                            <option value="GA">Gabon</option>
-                                                            <option value="GM">Gambia</option>
-                                                            <option value="GE">Georgia</option>
-                                                            <option value="DE">Germany</option>
-                                                            <option value="GH">Ghana</option>
-                                                            <option value="GI">Gibraltar</option>
-                                                            <option value="GR">Greece</option>
-                                                            <option value="GL">Greenland</option>
-                                                            <option value="GD">Grenada</option>
-                                                            <option value="GP">Guadeloupe</option>
-                                                            <option value="GU">Guam</option>
-                                                            <option value="GT">Guatemala</option>
-                                                            <option value="GG">Guernsey</option>
-                                                            <option value="GN">Guinea</option>
-                                                            <option value="GW">Guinea-Bissau</option>
-                                                            <option value="GY">Guyana</option>
-                                                            <option value="HT">Haiti</option>
-                                                            <option value="HM">Heard Island and McDonald Islands</option>
-                                                            <option value="VA">Holy See (Vatican City State)</option>
-                                                            <option value="HN">Honduras</option>
-                                                            <option value="HK">Hong Kong</option>
-                                                            <option value="HU">Hungary</option>
-                                                            <option value="IS">Iceland</option>
-                                                            <option value="IN">India</option>
-                                                            <option value="ID">Indonesia</option>
-                                                            <option value="IR">Iran, Islamic Republic of</option>
-                                                            <option value="IQ">Iraq</option>
-                                                            <option value="IE">Ireland</option>
-                                                            <option value="IM">Isle of Man</option>
-                                                            <option value="IL">Israel</option>
-                                                            <option value="IT">Italy</option>
-                                                            <option value="JM">Jamaica</option>
-                                                            <option value="JP">Japan</option>
-                                                            <option value="JE">Jersey</option>
-                                                            <option value="JO">Jordan</option>
-                                                            <option value="KZ">Kazakhstan</option>
-                                                            <option value="KE">Kenya</option>
-                                                            <option value="KI">Kiribati</option>
-                                                            <option value="KP">Korea, Democratic People's Republic of</option>
-                                                            <option value="KR">Korea, Republic of</option>
-                                                            <option value="KW">Kuwait</option>
-                                                            <option value="KG">Kyrgyzstan</option>
-                                                            <option value="LA">Lao People's Democratic Republic</option>
-                                                            <option value="LV">Latvia</option>
-                                                            <option value="LB">Lebanon</option>
-                                                            <option value="LS">Lesotho</option>
-                                                            <option value="LR">Liberia</option>
-                                                            <option value="LY">Libyan Arab Jamahiriya</option>
-                                                            <option value="LI">Liechtenstein</option>
-                                                            <option value="LT">Lithuania</option>
-                                                            <option value="LU">Luxembourg</option>
-                                                            <option value="MO">Macao</option>
-                                                            <option value="MK">Macedonia, the former Yugoslav Republic of</option>
-                                                            <option value="MG">Madagascar</option>
-                                                            <option value="MW">Malawi</option>
-                                                            <option value="MY">Malaysia</option>
-                                                            <option value="MV">Maldives</option>
-                                                            <option value="ML">Mali</option>
-                                                            <option value="MT">Malta</option>
-                                                            <option value="MH">Marshall Islands</option>
-                                                            <option value="MQ">Martinique</option>
-                                                            <option value="MR">Mauritania</option>
-                                                            <option value="MU">Mauritius</option>
-                                                            <option value="YT">Mayotte</option>
-                                                            <option value="MX">Mexico</option>
-                                                            <option value="FM">Micronesia, Federated States of</option>
-                                                            <option value="MD">Moldova, Republic of</option>
-                                                            <option value="MC">Monaco</option>
-                                                            <option value="MN">Mongolia</option>
-                                                            <option value="ME">Montenegro</option>
-                                                            <option value="MS">Montserrat</option>
-                                                            <option value="MA">Morocco</option>
-                                                            <option value="MZ">Mozambique</option>
-                                                            <option value="MM">Myanmar</option>
-                                                            <option value="NA">Namibia</option>
-                                                            <option value="NR">Nauru</option>
-                                                            <option value="NP">Nepal</option>
-                                                            <option value="NL">Netherlands</option>
-                                                            <option value="AN">Netherlands Antilles</option>
-                                                            <option value="NC">New Caledonia</option>
-                                                            <option value="NZ">New Zealand</option>
-                                                            <option value="NI">Nicaragua</option>
-                                                            <option value="NE">Niger</option>
-                                                            <option value="NG">Nigeria</option>
-                                                            <option value="NU">Niue</option>
-                                                            <option value="NF">Norfolk Island</option>
-                                                            <option value="MP">Northern Mariana Islands</option>
-                                                            <option value="NO">Norway</option>
-                                                            <option value="OM">Oman</option>
-                                                            <option value="PK">Pakistan</option>
-                                                            <option value="PW">Palau</option>
-                                                            <option value="PS">Palestinian Territory, Occupied</option>
-                                                            <option value="PA">Panama</option>
-                                                            <option value="PG">Papua New Guinea</option>
-                                                            <option value="PY">Paraguay</option>
-                                                            <option value="PE">Peru</option>
-                                                            <option value="PH">Philippines</option>
-                                                            <option value="PN">Pitcairn</option>
-                                                            <option value="PL">Poland</option>
-                                                            <option value="PT">Portugal</option>
-                                                            <option value="PR">Puerto Rico</option>
-                                                            <option value="QA">Qatar</option>
-                                                            <option value="RE">R&eacute;union</option>
-                                                            <option value="RO">Romania</option>
-                                                            <option value="RU">Russian Federation</option>
-                                                            <option value="RW">Rwanda</option>
-                                                            <option value="BL">Saint Barth&eacute;lemy</option>
-                                                            <option value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
-                                                            <option value="KN">Saint Kitts and Nevis</option>
-                                                            <option value="LC">Saint Lucia</option>
-                                                            <option value="MF">Saint Martin (French part)</option>
-                                                            <option value="PM">Saint Pierre and Miquelon</option>
-                                                            <option value="VC">Saint Vincent and the Grenadines</option>
-                                                            <option value="WS">Samoa</option>
-                                                            <option value="SM">San Marino</option>
-                                                            <option value="ST">Sao Tome and Principe</option>
-                                                            <option value="SA">Saudi Arabia</option>
-                                                            <option value="SN">Senegal</option>
-                                                            <option value="RS">Serbia</option>
-                                                            <option value="SC">Seychelles</option>
-                                                            <option value="SL">Sierra Leone</option>
-                                                            <option value="SG">Singapore</option>
-                                                            <option value="SK">Slovakia</option>
-                                                            <option value="SI">Slovenia</option>
-                                                            <option value="SB">Solomon Islands</option>
-                                                            <option value="SO">Somalia</option>
-                                                            <option value="ZA">South Africa</option>
-                                                            <option value="GS">South Georgia and the South Sandwich Islands</option>
-                                                            <option value="ES">Spain</option>
-                                                            <option value="LK">Sri Lanka</option>
-                                                            <option value="SD">Sudan</option>
-                                                            <option value="SR">Suriname</option>
-                                                            <option value="SJ">Svalbard and Jan Mayen</option>
-                                                            <option value="SZ">Swaziland</option>
-                                                            <option value="SE">Sweden</option>
-                                                            <option value="CH">Switzerland</option>
-                                                            <option value="SY">Syrian Arab Republic</option>
-                                                            <option value="TW">Taiwan, Province of China</option>
-                                                            <option value="TJ">Tajikistan</option>
-                                                            <option value="TZ">Tanzania, United Republic of</option>
-                                                            <option value="TH">Thailand</option>
-                                                            <option value="TL">Timor-Leste</option>
-                                                            <option value="TG">Togo</option>
-                                                            <option value="TK">Tokelau</option>
-                                                            <option value="TO">Tonga</option>
-                                                            <option value="TT">Trinidad and Tobago</option>
-                                                            <option value="TN">Tunisia</option>
-                                                            <option value="TR">Turkey</option>
-                                                            <option value="TM">Turkmenistan</option>
-                                                            <option value="TC">Turks and Caicos Islands</option>
-                                                            <option value="TV">Tuvalu</option>
-                                                            <option value="UG">Uganda</option>
-                                                            <option value="UA">Ukraine</option>
-                                                            <option value="AE">United Arab Emirates</option>
-                                                            <option value="GB">United Kingdom</option>
-                                                            <option value="US">United States</option>
-                                                            <option value="UM">United States Minor Outlying Islands</option>
-                                                            <option value="UY">Uruguay</option>
-                                                            <option value="UZ">Uzbekistan</option>
-                                                            <option value="VU">Vanuatu</option>
-                                                            <option value="VE">Venezuela, Bolivarian Republic of</option>
-                                                            <option value="VN">Viet Nam</option>
-                                                            <option value="VG">Virgin Islands, British</option>
-                                                            <option value="VI">Virgin Islands, U.S.</option>
-                                                            <option value="WF">Wallis and Futuna</option>
-                                                            <option value="EH">Western Sahara</option>
-                                                            <option value="YE">Yemen</option>
-                                                            <option value="ZM">Zambia</option>
-                                                            <option value="ZW">Zimbabwe</option>
-                                                        </select>
-                                                    </div>
-                                                </div><!--end col-->
-                                                <div class="col-lg-3">
-                                                    <div class="filler-job-form">
-                                                        <i class="bi bi-briefcase"></i>
-                                                        <select class="form-select " data-trigger name="choices-single-categories" id="choices-single-categories" aria-label="Default select example">
-                                                            <option value="4">Accounting</option>
-                                                            <option value="1">IT & Software</option>
-                                                            <option value="3">Marketing</option>
-                                                            <option value="5">Banking</option>
-                                                        </select>
-                                                    </div>
-                                                </div><!--end col-->
+                                                </div>
                                                 <div class="col-lg-3">
                                                     <div>
-                                                        <a href="javascript:void(0)" class="btn btn-primary"><i class="uil uil-filter"></i> Filter</a>
-                                                        <a href="javascript:void(0)" class="btn btn-success ms-2"><i class="uil uil-cog"></i> Advance</a>
+                                                        <a href="javascript:void(0)" class="btn btn-success ms-2"><i class="bi bi-briefcase"></i> </a>
                                                     </div>
                                                 </div>
                                             </div><!--end row-->
@@ -556,13 +267,13 @@
 
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <div class="candidate-list">
-                                        <div class="candidate-list-box card mt-4">
+                                    <div class="candidate-list" id="candidate-list"><!-- Candidates container -->
+                                        <div class="candidate-list-box card mt-4"> <!-- Individual Candidates -->
                                             <div class="card-body p-4">
                                                 <div class="row align-items-center">
                                                     <div class="col-auto">
                                                         <div class="candidate-list-images">
-                                                            <a href="javascript:void(0)"><!-- <img src="assets/images/user/img-01.jpg" alt="" class="avatar-md img-thumbnail rounded-circle"> --></a>
+                                                            <a href="javascript:void(0)"> <img src="assets/images/user/o.jpg" alt="" class="avatar-md img-thumbnail rounded-circle"> </a>
                                                         </div>
                                                     </div><!--end col-->
                                                     
@@ -596,7 +307,7 @@
                                                 <div class="row align-items-center">
                                                     <div class="col-auto">
                                                         <div class="candidate-list-images">
-                                                            <a href="javascript:void(0)"><!-- <img src="assets/images/user/img-02.jpg" alt="" class="avatar-md img-thumbnail rounded-circle"> --></a>
+                                                            <a href="javascript:void(0)"> <img src="assets/images/user/ooo.jpg" alt="" class="avatar-md img-thumbnail rounded-circle"> </a>
                                                         </div>
                                                     </div><!--end col-->
                                                     <div class="col-lg-5">
@@ -628,7 +339,7 @@
                                                 <div class="row align-items-center">
                                                     <div class="col-auto">
                                                         <div class="candidate-list-images">
-                                                            <a href="javascript:void(0)"><!-- <img src="assets/images/user/img-03.jpg" alt="" class="avatar-md img-thumbnail rounded-circle"> --></a>
+                                                            <a href="javascript:void(0)"> <img src="assets/images/user/oooo.jpg" alt="" class="avatar-md img-thumbnail rounded-circle"> </a>
                                                         </div>
                                                     </div><!--end col-->
                                                     <div class="col-lg-5">
@@ -660,7 +371,7 @@
                                                 <div class="row align-items-center">
                                                     <div class="col-auto">
                                                         <div class="candidate-list-images">
-                                                            <a href="javascript:void(0)"><!-- <img src="assets/images/user/img-04.jpg" alt="" class="avatar-md img-thumbnail rounded-circle"> --></a>
+                                                            <a href="javascript:void(0)"> <img src="assets/images/user/ooooo.jpg" alt="" class="avatar-md img-thumbnail rounded-circle"> </a>
                                                         </div>
                                                     </div><!--end col-->
                                                     <div class="col-lg-5">
@@ -692,7 +403,7 @@
                                                 <div class="row align-items-center">
                                                     <div class="col-auto">
                                                         <div class="candidate-list-images">
-                                                            <a href="javascript:void(0)"><!-- <img src="assets/images/user/img-05.jpg" alt="" class="avatar-md img-thumbnail rounded-circle"> --></a>
+                                                            <a href="javascript:void(0)"> <img src="assets/images/user/oooooo.jpg" alt="" class="avatar-md img-thumbnail rounded-circle"> </a>
                                                         </div>
                                                     </div><!--end col-->
                                                     <div class="col-lg-5">
@@ -724,7 +435,7 @@
                                                 <div class="row align-items-center">
                                                     <div class="col-auto">
                                                         <div class="candidate-list-images">
-                                                            <a href="javascript:void(0)"><!-- <img src="assets/images/user/img-06.jpg" alt="" class="avatar-md img-thumbnail rounded-circle"> --></a>
+                                                            <a href="javascript:void(0)"> <img src="assets/images/user/ooooooo.jpg" alt="" class="avatar-md img-thumbnail rounded-circle"> </a>
                                                         </div>
                                                     </div><!--end col-->
                                                     <div class="col-lg-5">
@@ -756,7 +467,7 @@
                                                 <div class="row align-items-center">
                                                     <div class="col-auto">
                                                         <div class="candidate-list-images">
-                                                            <a href="javascript:void(0)"><!-- <img src="assets/images/user/img-07.jpg" alt="" class="avatar-md img-thumbnail rounded-circle"> --></a>
+                                                            <a href="javascript:void(0)"> <img src="assets/images/user/oooooooo.jpg" alt="" class="avatar-md img-thumbnail rounded-circle"> </a>
                                                         </div>
                                                     </div><!--end col-->
                                                     <div class="col-lg-5">
@@ -788,7 +499,7 @@
                                                 <div class="row align-items-center">
                                                     <div class="col-auto">
                                                         <div class="candidate-list-images">
-                                                            <a href="javascript:void(0)"><!-- <img src="assets/images/user/img-08.jpg" alt="" class="avatar-md img-thumbnail rounded-circle"> --></a>
+                                                            <a href="javascript:void(0)"> <img src="assets/images/user/ooooooooo.jpg" alt="" class="avatar-md img-thumbnail rounded-circle"> </a>
                                                         </div>
                                                     </div><!--end col-->
                                                     <div class="col-lg-5">
@@ -940,35 +651,7 @@
                 </div>
                 <!-- END FOOTER -->
 
-                <!-- Style switcher -->
-                <div id="style-switcher" onclick="toggleSwitcher()" style="left: -165px;">
-                    <div>
-                        <h6>Select your color</h6>
-                        <ul class="pattern list-unstyled mb-0">
-                            <li>
-                                <a class="color-list color1" href="javascript: void(0);" onclick="setColorGreen()"></a>
-                            </li>
-                            <li>
-                                <a class="color-list color2" href="javascript: void(0);" onclick="setColor('blue')"></a>
-                            </li>
-                            <li>
-                                <a class="color-list color3" href="javascript: void(0);" onclick="setColor('green')"></a>
-                            </li>
-                        </ul>
-                        <div class="mt-3">
-                            <h6>Light/dark Layout</h6>
-                            <div class="text-center mt-3">
-                                <!-- light-dark mode -->
-                                <a href="javascript: void(0);" id="mode" class="mode-btn text-white rounded-3">
-                                    <i class="uil uil-brightness mode-dark mx-auto"></i>
-                                    <i class="uil uil-moon mode-light"></i>
-                                </a>
-                                <!-- END light-dark Mode -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end switcher-->
+                
 
                 <!--start back-to-top-->
                 <button onclick="topFunction()" id="back-to-top">
