@@ -14,6 +14,7 @@
         <meta content="Themesdesign" name="author" />
         
 
+        <link rel="stylesheet" href="assets/css/popupForm.css">
         <!-- App favicon -->
         <link rel="shortcut icon" href="assets/images/favicon.ico">
 
@@ -38,6 +39,173 @@
 
         <!-- Begin page -->
         <div>
+    <!-- Modal -->
+<div class="modal fade show" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: block;" data-bs-backdrop="static">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content" style="width: 1273px;">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Sign up to get Access !</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="width-adjustment" >
+
+                <div class="containers right-panel-active" style="margin: 0 auto;">
+                    <!-- Sign Up -->
+                    <div class="containers__form containers--signup">
+                        <div class="signup">
+                                <h2 class="form__title">Sign Up</h2>
+                                <input type="text" name="txt" placeholder="Username" required="" class="input" />
+                                <input type="email" id="username"  placeholder="Email" required class="input" />
+                                <input type="password" id="password" placeholder="Password" required="" class="input" />
+                                <select class="form-select form-select-lg mb-3" id="role" aria-label=".form-select-lg example">
+                                    <option selected>Choose your role</option>
+                                    <option value="user">Job Seeker</option>
+                                    <option value="admin">Recruiter</option>
+                                  </select>
+                                <button type="submit" style="border: 1px solid rgb(202, 197, 197);
+                                border-radius: 4px;
+                                padding: 14px;
+                                background-color: white;
+                                text-transform: uppercase;
+                                margin-top: 1rem;" onclick="signup()">Sign Up</button>
+                            
+                        </div>
+                    </div>
+
+                    <!-- Sign In -->
+                    <div class="containers__form containers--signin">
+                        <div class="login">
+                                <h2 class="form__title">Sign In</h2>
+                                <input type="email" id="signinUsername"  placeholder="Email" required="" class="input" />
+                                <input type="password" id="signinPassword" placeholder="Password" required="" class="input" />
+                                <a href="#" class="link">Forgot your password?</a>
+                                <button type="submit" style="border: 1px solid rgb(202, 197, 197);
+                                 border-radius: 4px;
+                                padding: 14px;
+                                background-color: white;
+                                text-transform: uppercase;
+                                margin-top: 1rem;" onclick="signin()">Sign In</button>
+                            
+                        </div>
+                    </div>
+                    <script>
+                        function signup() {
+                          var username = document.getElementById('username').value;
+                          var password = document.getElementById('password').value;
+                          var role = document.getElementById('role').value;
+                          
+                          // Retrieve existing user data from session storage
+                          var users = sessionStorage.getItem('users');
+                          
+                          if (users) {
+                            // Parse existing user data
+                            users = JSON.parse(users);
+                          } else {
+                            // Initialize users array if it doesn't exist
+                            users = [];
+                          }
+                          
+                          // Create new user object
+                          var newUser = {
+                            username: username,
+                            password: password,
+                            role: role
+                          };
+                          
+                          // Add new user to the users array
+                          users.push(newUser);
+                          
+                          // Store updated users array in session storage
+                          sessionStorage.setItem('users', JSON.stringify(users));
+                          
+                          /* // Redirect based on the selected role
+                          if (role === 'user') {
+                            window.location.href = 'user.html';
+                          } else if (role === 'admin') {
+                            window.location.href = 'admin.html';
+                          } */
+                        }
+                        
+                        function signin() {
+                          var username = document.getElementById('signinUsername').value;
+                          var password = document.getElementById('signinPassword').value;
+                          
+                          // Retrieve stored user data from session storage
+                          var users = sessionStorage.getItem('users');
+                          
+                          if (users) {
+                            // Parse user data
+                            users = JSON.parse(users);
+                            
+                            // Find user by username and password
+                            var matchedUser = users.find(function(user) {
+                              return user.username === username && user.password === password;
+                            });
+                            
+                            if (matchedUser) {
+                              // Redirect based on the stored role
+                              if (matchedUser.role === 'user') {
+                                alert('Welcome Job Seeker !');
+                                window.location.href = 'index.html';
+                              } else if (matchedUser.role === 'admin') {
+                                alert('Welcome, Recruiter !');
+                                window.location.href = 'candidate-list.html';
+                              }
+                            } else {
+                              alert('Invalid username or password');
+                            }
+                          } else {
+                            alert('No users found. Please sign up first.');
+                          }
+                        }
+                      </script>
+
+                    <!-- Overlay -->
+                    <div class="containers__overlay">
+                        <div class="overlay">
+                            <div class="overlay__panel overlay--left">
+                                <button style="border: 1px solid rgb(255, 255, 255);
+                                border-radius: 4px;
+                               padding: 14px;
+                               background-color: white;
+                               text-transform: uppercase;
+                               margin-top: 1rem;
+                               background: transparent;
+                               color: white;
+                               font-weight: 600;"  id="signIn">Sign In
+                                    ?</button>
+                            </div>
+                            <div class="overlay__panel overlay--right">
+                                <button style="border: 1px solid rgb(255, 255, 255);
+                                border-radius: 4px;
+                               padding: 14px;
+                               background-color: white;
+                               text-transform: uppercase;
+                               margin-top: 1rem;
+                               background: transparent;
+                               color: white;
+                               font-weight: 600;"  id="signUp">Sign Up
+                                    ?</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/popupForm.js"></script>
+  
+  <script>
+    // JavaScript code to trigger the modal on page load
+    window.addEventListener('DOMContentLoaded', function() {
+      var myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
+      myModal.show();
+    });
+  </script>
+  
 
             <!-- START TOP-BAR -->
             <div class="top-bar">
@@ -228,7 +396,7 @@
                                 <div class="col-lg-7">
                                     <div class="mb-4 pb-3 me-lg-5">
                                         <h6 class="sub-title">Apply for jobs in South Africa</h6>
-                                        <h1 class="display-5 fw-semibold mb-3">A door of opportunity swings wide open, Discover your dream job with </span></h1>
+                                        <h1 class="display-5 fw-semibold mb-3">A door of opportunity swings wide open, Discover your dream job here. </span></h1>
                                         
                                     </div>
                                     <form action="#">

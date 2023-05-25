@@ -2148,7 +2148,7 @@ body[data-layout-mode="dark"] .profile-active {
 }
 .bg-auth {
   padding: 40px 0;
-  background-color: rgba(118, 109, 244, 0.1);
+  background-color: #e5e5e5;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -2170,7 +2170,7 @@ body[data-layout-mode="dark"] .profile-active {
   overflow: hidden;
 }
 .auth-box .auth-content {
-  background-color: #493ef0;
+  background-color: #74788d;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
