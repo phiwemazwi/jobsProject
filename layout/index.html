@@ -40,7 +40,7 @@
         <!-- Begin page -->
         <div>
     <!-- Modal -->
-<div class="modal fade show" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: block;" data-bs-backdrop="static">
+<div class="modal fade show" id="exampleModal" tabindex="-1" ><!-- data-bs-backdrop="static" --> <!-- aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: block;"  -->
     <div class="modal-dialog modal-xl">
       <div class="modal-content" style="width: 1273px;">
         <div class="modal-header">
@@ -198,13 +198,13 @@
   </div>
   <script src="assets/js/popupForm.js"></script>
   
-  <script>
+ <!--  <script>
     // JavaScript code to trigger the modal on page load
     window.addEventListener('DOMContentLoaded', function() {
       var myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
       myModal.show();
     });
-  </script>
+  </script> -->
   
 
             <!-- START TOP-BAR -->
@@ -246,19 +246,9 @@
                                 </ul>
                             </li>
                             <li class="nav-item dropdown dropdown-hover">
-                                <a class="nav-link" href="javascript:void(0)" id="pagesdoropdown" role="button" data-bs-toggle="dropdown">
-                                    Recruiter
-                                    
+                                <a class="nav-link" href="sign-in.html" id="pagesdoropdown">
+                                    Login
                                 </a>
-                                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-center" aria-labelledby="pagesdoropdown">
-                                    <div class="row">
-                                        <div class="col-lg-">
-                                            <div>
-                                                <a class="dropdown-item" href="candidate-list.html">Candidate List</a>
-                                            </div>
-                                        </div><!--end col-->
-                                    </div>
-                                </div>
                             </li><!--end dropdown-->
                             <li class="nav-item dropdown dropdown-hover">
                                 <a class="nav-link" href="javascript:void(0)" id="productdropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
