@@ -14,6 +14,7 @@
         <meta content="Themesdesign" name="author" />
         
 
+        <link rel="stylesheet" href="assets/css/popupForm.css">
         <!-- App favicon -->
         <link rel="shortcut icon" href="assets/images/favicon.ico">
 
@@ -38,6 +39,103 @@
 
         <!-- Begin page -->
         <div>
+    <!-- Modal -->
+<div class="modal fade show" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: block;" data-bs-backdrop="static">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Sign up to get Access !</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="width-adjustment">
+
+                <div class="containers right-panel-active">
+                    <!-- Sign Up -->
+                    <div class="containers__form containers--signup">
+                        <div class="signup">
+                            <form class="form" id="form1">
+                                <h2 class="form__title">Sign Up</h2>
+                                <input type="text" name="txt" placeholder="Username" required="" class="input" />
+                                <input type="email" id="remail" name="email" placeholder="Email" required="" class="input" />
+                                <input type="password" id="rpassword" name="pswd" placeholder="Password" required="" class="input" />
+                                <button type="submit" style="border: 1px solid rgb(202, 197, 197);
+                                border-radius: 4px;
+                                padding: 14px;
+                                background-color: white;
+                                text-transform: uppercase;
+                                margin-top: 1rem;" onclick="signup()">Sign Up</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Sign In -->
+                    <div class="containers__form containers--signin">
+                        <div class="login">
+                            <form class="form" id="form2">
+                                <h2 class="form__title">Sign In</h2>
+                                <input type="email" id="username" name="email" placeholder="Email" required="" class="input" />
+                                <input type="password" id="password" name="pswd" placeholder="Password" required="" class="input" />
+                                <a href="#" class="link">Forgot your password?</a>
+                                <button type="submit" style="border: 1px solid rgb(202, 197, 197);
+                                 border-radius: 4px;
+                                padding: 14px;
+                                background-color: white;
+                                text-transform: uppercase;
+                                margin-top: 1rem;" onclick="login()">Sign In</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Overlay -->
+                    <div class="containers__overlay">
+                        <div class="overlay">
+                            <div class="overlay__panel overlay--left">
+                                <button style="border: 1px solid rgb(255, 255, 255);
+                                border-radius: 4px;
+                               padding: 14px;
+                               background-color: white;
+                               text-transform: uppercase;
+                               margin-top: 1rem;
+                               background: transparent;
+                               color: white;
+                               font-weight: 600;"  id="signIn">Sign In
+                                    ?</button>
+                            </div>
+                            <div class="overlay__panel overlay--right">
+                                <button style="border: 1px solid rgb(255, 255, 255);
+                                border-radius: 4px;
+                               padding: 14px;
+                               background-color: white;
+                               text-transform: uppercase;
+                               margin-top: 1rem;
+                               background: transparent;
+                               color: white;
+                               font-weight: 600;"  id="signUp">Sign Up
+                                    ?</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/popupForm.js"></script>
+  
+  <script>
+    // JavaScript code to trigger the modal on page load
+    window.addEventListener('DOMContentLoaded', function() {
+      var myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
+      myModal.show();
+    });
+  </script>
+  
 
             <!-- START TOP-BAR -->
             <div class="top-bar">
@@ -228,7 +326,7 @@
                                 <div class="col-lg-7">
                                     <div class="mb-4 pb-3 me-lg-5">
                                         <h6 class="sub-title">Apply for jobs in South Africa</h6>
-                                        <h1 class="display-5 fw-semibold mb-3">A door of opportunity swings wide open, Discover your dream job with </span></h1>
+                                        <h1 class="display-5 fw-semibold mb-3">A door of opportunity swings wide open, Discover your dream job here. </span></h1>
                                         
                                     </div>
                                     <form action="#">
