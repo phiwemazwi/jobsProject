@@ -54,16 +54,14 @@
                     <!-- Sign Up -->
                     <div class="containers__form containers--signup">
                         <div class="signup">
-                            <form class="form" id="form1">
                                 <h2 class="form__title">Sign Up</h2>
                                 <input type="text" name="txt" placeholder="Username" required="" class="input" />
-                                <input type="email" id="remail" name="email" placeholder="Email" required="" class="input" />
-                                <input type="password" id="rpassword" name="pswd" placeholder="Password" required="" class="input" />
-                                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                <input type="email" id="username"  placeholder="Email" required class="input" />
+                                <input type="password" id="password" placeholder="Password" required="" class="input" />
+                                <select class="form-select form-select-lg mb-3" id="role" aria-label=".form-select-lg example">
                                     <option selected>Choose your role</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                                    <option value="user">Job Seeker</option>
+                                    <option value="admin">Recruiter</option>
                                   </select>
                                 <button type="submit" style="border: 1px solid rgb(202, 197, 197);
                                 border-radius: 4px;
@@ -71,27 +69,97 @@
                                 background-color: white;
                                 text-transform: uppercase;
                                 margin-top: 1rem;" onclick="signup()">Sign Up</button>
-                            </form>
+                            
                         </div>
                     </div>
 
                     <!-- Sign In -->
                     <div class="containers__form containers--signin">
                         <div class="login">
-                            <form class="form" id="form2">
                                 <h2 class="form__title">Sign In</h2>
-                                <input type="email" id="username" name="email" placeholder="Email" required="" class="input" />
-                                <input type="password" id="password" name="pswd" placeholder="Password" required="" class="input" />
+                                <input type="email" id="signinUsername"  placeholder="Email" required="" class="input" />
+                                <input type="password" id="signinPassword" placeholder="Password" required="" class="input" />
                                 <a href="#" class="link">Forgot your password?</a>
                                 <button type="submit" style="border: 1px solid rgb(202, 197, 197);
                                  border-radius: 4px;
                                 padding: 14px;
                                 background-color: white;
                                 text-transform: uppercase;
-                                margin-top: 1rem;" onclick="login()">Sign In</button>
-                            </form>
+                                margin-top: 1rem;" onclick="signin()">Sign In</button>
+                            
                         </div>
                     </div>
+                    <script>
+                        function signup() {
+                          var username = document.getElementById('username').value;
+                          var password = document.getElementById('password').value;
+                          var role = document.getElementById('role').value;
+                          
+                          // Retrieve existing user data from session storage
+                          var users = sessionStorage.getItem('users');
+                          
+                          if (users) {
+                            // Parse existing user data
+                            users = JSON.parse(users);
+                          } else {
+                            // Initialize users array if it doesn't exist
+                            users = [];
+                          }
+                          
+                          // Create new user object
+                          var newUser = {
+                            username: username,
+                            password: password,
+                            role: role
+                          };
+                          
+                          // Add new user to the users array
+                          users.push(newUser);
+                          
+                          // Store updated users array in session storage
+                          sessionStorage.setItem('users', JSON.stringify(users));
+                          
+                          /* // Redirect based on the selected role
+                          if (role === 'user') {
+                            window.location.href = 'user.html';
+                          } else if (role === 'admin') {
+                            window.location.href = 'admin.html';
+                          } */
+                        }
+                        
+                        function signin() {
+                          var username = document.getElementById('signinUsername').value;
+                          var password = document.getElementById('signinPassword').value;
+                          
+                          // Retrieve stored user data from session storage
+                          var users = sessionStorage.getItem('users');
+                          
+                          if (users) {
+                            // Parse user data
+                            users = JSON.parse(users);
+                            
+                            // Find user by username and password
+                            var matchedUser = users.find(function(user) {
+                              return user.username === username && user.password === password;
+                            });
+                            
+                            if (matchedUser) {
+                              // Redirect based on the stored role
+                              if (matchedUser.role === 'user') {
+                                alert('Welcome Job Seeker !');
+                                window.location.href = 'index.html';
+                              } else if (matchedUser.role === 'admin') {
+                                alert('Welcome, Recruiter !');
+                                window.location.href = 'candidate-list.html';
+                              }
+                            } else {
+                              alert('Invalid username or password');
+                            }
+                          } else {
+                            alert('No users found. Please sign up first.');
+                          }
+                        }
+                      </script>
 
                     <!-- Overlay -->
                     <div class="containers__overlay">
