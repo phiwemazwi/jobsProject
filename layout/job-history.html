@@ -7,7 +7,7 @@
         
         
         <meta charset="utf-8" />
-        <title>Post A Job</title>
+        <title>Contact</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content=" " />
         <meta name="keywords" content="" />
@@ -24,6 +24,23 @@
         <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
         <!--Custom Css-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <style>
+            /* Add your CSS styles here */
+            .job-details {
+              border: 1px solid #ccc;
+              padding: 10px;
+              margin-bottom: 10px;
+            }
+            
+            .job-details h2 {
+              font-size: 18px;
+              margin-bottom: 5px;
+            }
+            
+            .job-details p {
+              margin: 0;
+            }
+          </style>
 
     </head>
 
@@ -48,11 +65,6 @@
                     </div>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <ul class="navbar-nav mx-auto navbar-center">
-                            <li class="nav-item dropdown dropdown-hover">
-                                <a class="nav-link" href="candidate-list.html" id="homedrop" >
-                                    Home 
-                                </a>
-                            </li>
                             <li class="nav-item dropdown dropdown-hover">
                                 <a class="nav-link" href="javascript:void(0)" id="jobsdropdown" role="button" data-bs-toggle="dropdown">
                                     Company
@@ -82,6 +94,7 @@
             <!-- Navbar End -->
 
 
+
             
             <div class="main-content">
 
@@ -93,7 +106,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-md-6">
                                     <div class="text-center text-white">
-                                        <h3 class="mb-4">Contact</h3>
+                                        <h3 class="mb-4">Job History</h3>
                                         <div class="page-next">
                                             <nav class="d-inline-block" aria-label="breadcrumb text-center">
                                                 <ol class="breadcrumb justify-content-center">
@@ -129,60 +142,28 @@
                             <div class="row align-items-center mt-5">
                                 <div class="col-lg-6">
                                     <div class="section-title mt-4 mt-lg-0">
-                                        <h3 class="title">Post A Job</h3>
-                                        <p class="text-muted">Start working with Jobcy that can provide everything you need to generate
-                                            awareness, drive traffic, connect.</p>
-                                        <form  class="contact-form mt-4" id="jobForm">
-                                            <span id="error-msg"></span>
-                                            <div class="row">
-                                                <div class="col-lg-12">
-                                                    <div class="mb-3">
-                                                        <label for="nameInput" class="form-label">Name</label>
-                                                        <input type="text" id="name" class="form-control" required placeholder="Enter your name">
-                                                    </div>
-                                                </div><!--end col-->
-                                                <div class="col-md-6">
-                                                    <div class="mb-3">
-                                                        <label for="emailInput" class="form-label">Company</label>
-                                                        <input type="text" class="form-control" id="company" name="email" placeholder="Enter your company">
-                                                    </div>
-                                                </div><!--end col-->
-                                                <div class="col-md-6">
-                                                    <div class="mb-3">
-                                                        <label for="emailInput" class="form-label">Location</label>
-                                                        <input type="text" class="form-control" id="location" name="email" placeholder="Enter your Location">
-                                                    </div>
-                                                </div><!--end col-->
-                                                <div class="col-md-6">
-                                                    <div class="mb-3">
-                                                        <label for="emailInput" class="form-label">Salary</label>
-                                                        <input type="text" class="form-control" id="salary" name="email" placeholder="Enter your Location">
-                                                    </div>
-                                                </div><!--end col-->
-                                                <div class="col-md-6">
-                                                    <div class="mb-3">
-                                                        <label for="emailInput" class="form-label">Employment opportunity</label>
-                                                        <input type="text" class="form-control" id="employmentO" name="email" placeholder="Enter your Location">
-                                                    </div>
-                                                </div><!--end col-->
-                                                <div class="col-md-6">
-                                                    <div class="mb-3">
-                                                        <label for="subjectInput" class="form-label">Position</label>
-                                                        <input type="text" class="form-control" id="position" name="subject" placeholder="Enter your position">
-                                                    </div>
-                                                </div><!--end col-->
-                                                <div class="col-lg-12">
-                                                    <div class="mb-3">
-                                                        <label for="meassageInput" class="form-label">Job Description</label>
-                                                        <textarea class="form-control" id="description" placeholder="Enter your requirements" name="comments"  rows="3"></textarea>
-                                                    </div>
-                                                </div><!--end col-->
-                                            </div><!--end row-->
-                                            <div class="text-end">
-                                                <button type="submit" class="btn btn-primary"> Post Job <i class="uil uil-message ms-1"></i></button>
-                                            </div>
-                                        </form><!--end form-->
-                                        <script src="script.js"></script>
+                                        <h3 class="title">Job History</h3>
+                                        <div id="jobContainer"></div>
+                                        <script>
+                                            // Retrieve the job list from localStorage
+                                            var jobs = JSON.parse(localStorage.getItem("jobs")) || [];
+                                          
+                                            // Iterate over the jobs and display them in the jobContainer
+                                            var jobContainer = document.getElementById("jobContainer");
+                                            jobs.forEach(function(job) {
+                                              var jobDetails = document.createElement("div");
+                                              jobDetails.className = "job-details"; // Add class name
+                                              jobDetails.innerHTML = "<h2>Job Details:</h2>" +
+                                                "<p><strong>Name:</strong> " + job.name + "</p>" +
+                                                "<p><strong>Company:</strong> " + job.company + "</p>" +
+                                                "<p><strong>Company:</strong> " + job.location + "</p>" +
+                                                "<p><strong>Company:</strong> " + job.salary + "</p>" +
+                                                "<p><strong>Company:</strong> " + job.employmentO + "</p>" +
+                                                "<p><strong>Position:</strong> " + job.position + "</p>" +
+                                                "<p><strong>Job Description:</strong> " + job.description + "</p>";
+                                              jobContainer.appendChild(jobDetails);
+                                            });
+                                          </script>
 
                                     </div>
                                 </div>
