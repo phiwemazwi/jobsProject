@@ -7,7 +7,7 @@
         
         
         <meta charset="utf-8" />
-        <title>Contact</title>
+        <title>Job History</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content=" " />
         <meta name="keywords" content="" />
@@ -25,21 +25,38 @@
         <!--Custom Css-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
         <style>
-            /* Add your CSS styles here */
             .job-details {
-              border: 1px solid #ccc;
-              padding: 10px;
-              margin-bottom: 10px;
-            }
-            
-            .job-details h2 {
-              font-size: 18px;
-              margin-bottom: 5px;
-            }
-            
-            .job-details p {
-              margin: 0;
-            }
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+.job-details h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.job-details p {
+  margin: 0;
+}
+
+.job-details strong {
+  font-weight: bold;
+}
+
+.job-details p:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.job-details:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
           </style>
 
     </head>
@@ -143,6 +160,7 @@
                                 <div class="col-lg-6">
                                     <div class="section-title mt-4 mt-lg-0">
                                         <h3 class="title">Job History</h3>
+                                        
                                         <div id="jobContainer"></div>
                                         <script>
                                             // Retrieve the job list from localStorage
@@ -154,11 +172,12 @@
                                               var jobDetails = document.createElement("div");
                                               jobDetails.className = "job-details"; // Add class name
                                               jobDetails.innerHTML = "<h2>Job Details:</h2>" +
+                                              
                                                 "<p><strong>Name:</strong> " + job.name + "</p>" +
                                                 "<p><strong>Company:</strong> " + job.company + "</p>" +
-                                                "<p><strong>Company:</strong> " + job.location + "</p>" +
-                                                "<p><strong>Company:</strong> " + job.salary + "</p>" +
-                                                "<p><strong>Company:</strong> " + job.employmentO + "</p>" +
+                                                "<p><strong>location:</strong> " + job.location + "</p>" +
+                                                "<p><strong>salary:</strong> " + job.salary + "</p>" +
+                                                "<p><strong>employmentO:</strong> " + job.employmentO + "</p>" +
                                                 "<p><strong>Position:</strong> " + job.position + "</p>" +
                                                 "<p><strong>Job Description:</strong> " + job.description + "</p>";
                                               jobContainer.appendChild(jobDetails);
@@ -173,7 +192,28 @@
                         <!--end container-->
                     </section>
                     <!-- START CONTACT-PAGE -->
-
+<!-- ---------------------------------BACK UP ----------------------------------->
+<!-- <script>
+    // Retrieve the job list from localStorage
+    var jobs = JSON.parse(localStorage.getItem("jobs")) || [];
+  
+    // Iterate over the jobs and display them in the jobContainer
+    var jobContainer = document.getElementById("jobContainer");
+    jobs.forEach(function(job) {
+      var jobDetails = document.createElement("div");
+      jobDetails.className = "job-details"; // Add class name
+      jobDetails.innerHTML = "<h2>Job Details:</h2>" +
+        "<p><strong>Name:</strong> " + job.name + "</p>" +
+        "<p><strong>Company:</strong> " + job.company + "</p>" +
+        "<p><strong>location:</strong> " + job.location + "</p>" +
+        "<p><strong>salary:</strong> " + job.salary + "</p>" +
+        "<p><strong>employmentO:</strong> " + job.employmentO + "</p>" +
+        "<p><strong>Position:</strong> " + job.position + "</p>" +
+        "<p><strong>Job Description:</strong> " + job.description + "</p>";
+      jobContainer.appendChild(jobDetails);
+    });
+  </script> -->
+<!-- ---------------------------------BACK UP ----------------------------------->
                     
 
                 </div>
